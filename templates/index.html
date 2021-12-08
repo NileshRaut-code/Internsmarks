@@ -2,16 +2,47 @@
 <html lang="en">
 
 <head>
+<meta name="a.validate.01" content="c0ab04b6e3f26ae8bac38fb10fa1704dd3bf" />
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="google-site-verification" content="0ZeAvXfaa_klBIXHx9wb0SFh4D_yja4U4rixLk2ibiQ" />
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+<link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEgTmqdERhRO8e0z06n3_TfadfSmwUs_PAWw-1wz53Pb1H1KgiXk1yv2h0RN2xYsfbi5GzDl6HqlB-UvWYdtfeSBskqBDOJxwsgvgHd8aLP6Xlph6jmN81JEuVurHbzOrHZpLLJ1ieYTxesZ5YVbJHqiCTFZBVHVsWXn4iVzjze_xZXtUEcDh-SpWiXK=s320" type="image/icon type">
     <title>Home Internship Portal</title>
 </head>
 <style>
+
+.fa {
+  padding: 8px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius:22px;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;border-radius:22px;
+}
     .c {
         width: 100%;
         height: 30vh;
@@ -44,11 +75,24 @@
             margin-top: 0px;
     }
     }
+
+
+
 </style>
 
 <body>
 
-<a src="/"><img class="logo" src="https://blogger.googleusercontent.com/img/a/AVvXsEgTmqdERhRO8e0z06n3_TfadfSmwUs_PAWw-1wz53Pb1H1KgiXk1yv2h0RN2xYsfbi5GzDl6HqlB-UvWYdtfeSBskqBDOJxwsgvgHd8aLP6Xlph6jmN81JEuVurHbzOrHZpLLJ1ieYTxesZ5YVbJHqiCTFZBVHVsWXn4iVzjze_xZXtUEcDh-SpWiXK=s320 ">    <ul class="nav justify-content-end">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6H2X1F9XT8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6H2X1F9XT8');
+</script>
+<a href="/"><img class="logo" src="https://blogger.googleusercontent.com/img/a/AVvXsEgTmqdERhRO8e0z06n3_TfadfSmwUs_PAWw-1wz53Pb1H1KgiXk1yv2h0RN2xYsfbi5GzDl6HqlB-UvWYdtfeSBskqBDOJxwsgvgHd8aLP6Xlph6jmN81JEuVurHbzOrHZpLLJ1ieYTxesZ5YVbJHqiCTFZBVHVsWXn4iVzjze_xZXtUEcDh-SpWiXK=s320 ">    <ul class="nav justify-content-end">
  </a>  <div class="nov">
     <ul class="nav justify-content-end">
 
@@ -60,7 +104,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link active" href="/asdfghjkl">Add Job</a>
+            <a class="nav-link active" href="/add">Add Job</a>
         </li>
         <li class="nav-item">
             <a class="nav-link " href="/about_us">About us</a>
@@ -89,7 +133,6 @@
 
 
 
-
     <div class="jumbotron" >
         <br>
         {% for row in rows %}
@@ -98,9 +141,13 @@
             <h2 style="    padding-left: 20px;    padding-top: 26px;   font-size: inherit;">{{row["title"]}}</h2>
 
             <p style="padding-left: 25px;color:#525252">{{row["subtitle"]}}</p>
-            <div style="margin:10px"><a style="    background-color: bisque;    float: right;    width: auto;    padding: 2px;    text-decoration: none;    color: #00c7b4;    border-radius: 16px;" href="/post/{{ row[ 'id'] }}">.View Details ></a></div>
+            <div style="margin:10px"><a style="    background-color: bisque;    float: right;    width: auto;    padding: 2px;    text-decoration: none;    color: #00c7b4;    border-radius: 16px;" href="/post/{{ row[ 'id'] }}">View Details ></a></div>
         <br><br></p>
         </div>
+        {% if loop.index is divisibleby 3 %}          <div style="width:auto;height:81px"><script data-cfasync="false" type="text/javascript" src="https://www.linkonclick.com/a/display.php?r=4608159"></script></div>
+
+
+    {% endif %}
         {% endfor %}
     </div>
 
@@ -109,11 +156,22 @@
 
  <footer style=" background-color: #f9d2a4;    width: -webkit-fill-available;">
       <div  class="container">
+Total Views:<a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=73n9695j6m6115bnywpm2mtkf1ehuf4e" border="0" width='50px'  title="page counter" alt="page counter"></a>
 
           <p>Thank You For Visiting Out Portal .</p>
         <div class="row">
+
+
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; Nilesh Raut</p>
+         <!-- <a href="https://www.instagram.com/nilesh_2.7/?hl=en" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/nilesh_2.7/?hl=en" class="fa fa-twitter"></a>-->
+
+            <p class="copyright text-muted">Copyright &copy; <span style=" font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #f32170,
+                    #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;   text-align: center;margin: 4px; padding-top:13vh ">Nilesh Raut</span></p>
           </div>
         </div>
       </div>

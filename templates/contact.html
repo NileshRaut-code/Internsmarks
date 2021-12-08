@@ -22,6 +22,11 @@
         padding-left: 30%;
         padding-right: 30%;
     }
+    .close{
+            float: right;
+    background-color: transparent;
+    border-style: none;
+    }
 </style>
 
 <body>
@@ -41,13 +46,31 @@
             <a class="nav-link " href="/about_us">About us</a>
         </li>
     </ul>
+     {% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+
+        {{ message }}
+        <button type="button" class="close" onclick=delete_flash(this) data-dismiss="alert">&times;</button>
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
     <div class="c">
 
-        <h1 style="   text-align: center;margin: 4px; padding-top:13vh ">Contact</h1>
+        <h1 style="   text-align: center;margin: 4px; padding-top:13vh ">Contact && Registration</h1>
 
     </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    function delete_flash(flash){
+        $(flash).parent().remove()
+    }
+</script>
 
     <div class="for">
         <form action="/contact" method="post">
@@ -60,13 +83,20 @@
                 <label for="exampleInputPassword1">Name</label>
                 <input type="text" class="form-control" name="name">
             </div>
+                        <div class="form-group">
+                <label for="exampleInputPassword1">Message</label>
+                <textarea type="text" class="form-control" name="msg"></textarea>
+            </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+            <div style="width:auto"><script data-cfasync="false" type="text/javascript" src="https://www.linkonclick.com/a/display.php?r=4608159"></script></div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -79,6 +109,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <!-- BEGIN EZMOB TAG -->
+
+
      <footer>
       <div class="container">
         <div class="row">
