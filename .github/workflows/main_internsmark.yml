@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'internsmark'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D39222292D9426498B5BACA4B2213E4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_70E0F3BC97AD47C692B607B8436D3607 }}
